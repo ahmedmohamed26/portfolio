@@ -1,7 +1,6 @@
 import Header from "@/components/header/header";
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="md:w-1/2 xs:w-full center m-auto xs:p-5">
+      <body className="md:w-1/2 sm:w-full max-[600px]:p-3 center m-auto ">
         <Header />
         {children}
       </body>
