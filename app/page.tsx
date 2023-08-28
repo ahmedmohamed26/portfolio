@@ -7,7 +7,7 @@ export default function Home() {
         <h2 className="main-gray-color	text-2xl  font-PoppinsRegular">
           Frontend Developer
         </h2>
-        <h2 className="text-white	text-xs tracking-[.10em] relative bg-green-400 p-2 rounded-full font-PoppinsRegular">
+        <h2 className="text-white	text-xs tracking-[.05em] relative bg-green-500 py-1 px-2 rounded-full font-PoppinsRegular">
           AVAILABLE FOR WORK
         </h2>
       </div>
@@ -39,6 +39,7 @@ export default function Home() {
             className="rounded-lg"
           />
         </div>
+        <ul></ul>
       </div>
     </section>
   );
