@@ -2,14 +2,18 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
-
 import Link from "next/link";
 import Image from "next/image";
 let tabs = [
-  { id: "home", label: "Home", icon: "/svgs/home.svg" },
-  { id: "about", label: "About", icon: "/svgs/about.svg" },
-  { id: "skills", label: "Skills", icon: "/svgs/skills.svg" },
-  { id: "projects", label: "Projects", icon: "/svgs/projects.svg" },
+  { id: "home", label: "Home", icon: "/svgs/home.svg", path: "/" },
+  { id: "about", label: "About", icon: "/svgs/about.svg", path: "/about" },
+  { id: "skills", label: "Skills", icon: "/svgs/skills.svg", path: "/skills" },
+  {
+    id: "projects",
+    label: "Projects",
+    icon: "/svgs/projects.svg",
+    path: "/projects",
+  },
 ];
 function Header() {
   let [activeTab, setActiveTab] = useState(tabs[0].id);
@@ -23,26 +27,20 @@ function Header() {
               onClick={() => setActiveTab(tab.id)}
               className={`${
                 activeTab === tab.id ? "" : "hover:text-white/60"
-              } relative rounded-full px-2 py-2  text-sm font-medium bg-white text-white outline-sky-400 transition focus-visible:outline-2`}
-              style={{
-                WebkitTapHighlightColor: "transparent",
-              }}
+              } relative rounded-full px-2.5 py-2.5 bg-white text-white transition`}
+              title={tab.label}
             >
-              {activeTab === tab.id && (
-                <motion.span
-                  layoutId="bubble"
-                  className="absolute inset-0 z-10 bg-white mix-blend-difference"
-                  style={{ borderRadius: 9999 }}
-                  transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
-                />
-              )}
-              <Image
-                src={tab.icon}
-                alt="Home"
-                width={20}
-                height={20}
-                className="bg-white/60"
-              />
+              <Link href={tab.path} className="text-stone-500">
+                {activeTab === tab.id && (
+                  <motion.span
+                    layoutId="bubble"
+                    className="absolute inset-0 z-10 mix-blend-difference bg-white/10"
+                    style={{ borderRadius: 9999 }}
+                    transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                  />
+                )}
+                <Image src={tab.icon} alt="Home" width={20} height={20} />
+              </Link>
             </button>
           ))}
         </li>

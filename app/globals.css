@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: PoppinsMedium;
+  font-weight: 400;
+  font-display: auto;
+  src: url(../public/fonts/Poppins-Medium.ttf) format("ttf");
+}
+
+@font-face {
+  font-family: PoppinsRegular;
+  font-weight: 400;
+  font-display: auto;
+  src: url(../public/fonts/Poppins-Regular.ttf) format("ttf");
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -17,4 +31,17 @@
 }
 
 body {
-   background: rgb(236, 239, 243);}
+  background: rgb(236, 239, 243);
+}
+
+.wrapper {
+  @apply p-6 bg-white mt-5 rounded-md;
+}
+
+.main-gray-color {
+  @apply text-zinc-700;
+}
+
+.light-gray-color {
+  @apply text-zinc-500;
+}

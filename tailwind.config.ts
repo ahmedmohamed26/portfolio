@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 const config: Config = {
   content: [
@@ -7,6 +8,15 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    fontWeight: {
+      bold: "700",
+      extrabold: "800",
+    },
+    fontFamily: {
+      paragraph: ["Crimson Text, serif"],
+      PoppinsMedium: ["PoppinsMedium, sans-serif"],
+      PoppinsRegular: ["PoppinsRegular, sans-serif"],
+    },
     extend: {
       container: {
         center: true,
