@@ -1,0 +1,72 @@
+"use client";
+import { motion } from "framer-motion";
+export default function Skills() {
+  let skills: string[] = [
+    "React",
+    "Angular",
+    "Next js",
+    "Redux",
+    "Ngrx",
+    "Micro Frontend",
+    "JS",
+    "Ts",
+    "Rxjs",
+    "Webpack",
+    "StoryBook",
+    "React Native",
+    "Ionic",
+    "Angular Universal",
+    "Styled Component",
+    "Vite (basics)",
+    "Node js (basics)",
+    "Nest js (basics)",
+    "MongoDB",
+    "Express",
+    "Git",
+    "React Query",
+    "Framer Motion",
+    "Jest",
+    "Jest",
+    "Karma",
+    "MUI",
+    "Prime Ng",
+    "Semantic HTML",
+    "SEO",
+    "Web Performance",
+    "Html",
+    "Css",
+    "Sass",
+  ];
+
+  const boxVariant = {
+    hidden: {
+      y: -50,
+      opacity: 0,
+    },
+    visible: {
+      y: 0,
+      delay: 0.3,
+      opacity: 1,
+      staggerChildren: 0.5,
+    },
+  };
+  return (
+    <section className="wrapper">
+      <div className=" ">
+        <h1 className="text-4xl  main-color mb-5">Skills</h1>
+        <motion.ul
+          className="flex flex-wrap gap-6 items-center"
+          variants={boxVariant}
+          animate="visible"
+          initial="hidden"
+        >
+          {skills.map((skill) => (
+            <li className=" bg-stone-200 white/10 py-3 px-5 rounded-2xl">
+              <h6 className="font-PoppinsRegular">{skill}</h6>
+            </li>
+          ))}
+        </motion.ul>
+      </div>
+    </section>
+  );
+}

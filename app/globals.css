@@ -35,7 +35,7 @@ body {
 }
 
 .wrapper {
-  @apply p-6 bg-white mt-5 rounded-md;
+  @apply p-6 bg-white my-5 rounded-md;
 }
 
 .main-gray-color {
@@ -46,6 +46,6 @@ body {
   @apply text-zinc-500;
 }
 
-.main-color{
-  @apply text-slate-800 font-bold font-PoppinsMedium
+.main-color {
+  @apply text-slate-800 font-bold font-PoppinsMedium;
 }

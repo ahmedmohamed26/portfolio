@@ -19,18 +19,18 @@ function Header() {
   let [activeTab, setActiveTab] = useState(tabs[0].id);
   return (
     <div className="container h-[70px] bg-white shadow-sm flex items-center mt-5 rounded-md">
-      <ul className="flex  p-5">
+      <ul className="flex p-5">
         <li className="flex gap-2 ">
           {tabs.map((tab) => (
-            <button
-              key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
-              className={`${
-                activeTab === tab.id ? "" : "hover:text-white/60"
-              } relative rounded-full px-2.5 py-2.5 bg-white text-white transition`}
-              title={tab.label}
-            >
-              <Link href={tab.path} className="text-stone-500">
+            <Link href={tab.path} className="text-stone-500 ">
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className={`${
+                  activeTab === tab.id ? "" : "hover:text-white/60"
+                } relative rounded-full px-2.5 py-2.5 bg-white text-white transition`}
+                title={tab.label}
+              >
                 {activeTab === tab.id && (
                   <motion.span
                     layoutId="bubble"
@@ -40,8 +40,8 @@ function Header() {
                   />
                 )}
                 <Image src={tab.icon} alt="Home" width={20} height={20} />
-              </Link>
-            </button>
+              </button>
+            </Link>
           ))}
         </li>
       </ul>
