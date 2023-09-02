@@ -2,6 +2,8 @@ import type { Config } from "tailwindcss";
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 const config: Config = {
+  darkMode: "class",
+
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -20,6 +22,10 @@ const config: Config = {
     extend: {
       container: {
         center: true,
+      },
+      colors: {
+        "dark-black": "rgba(22, 22, 22, 1)",
+        "light-gray": "rgb(33, 33, 33)",
       },
     },
   },

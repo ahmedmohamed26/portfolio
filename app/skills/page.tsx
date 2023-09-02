@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 export default function Skills() {
-  let skills: string[] = [
+  const skills: string[] = [
     "React",
     "Angular",
     "Next js",
@@ -51,17 +51,20 @@ export default function Skills() {
     },
   };
   return (
-    <section className="wrapper">
+    <section className="wrapper dark:bg-light-gray">
       <div className=" ">
-        <h1 className="text-4xl  main-color mb-5">Skills</h1>
+        <h1 className="text-4xl  main-color mb-5 dark:text-white">Skills</h1>
         <motion.ul
           className="flex flex-wrap gap-6 items-center"
           variants={boxVariant}
           animate="visible"
           initial="hidden"
         >
-          {skills.map((skill) => (
-            <li className=" bg-stone-200 white/10 py-3 px-5 rounded-2xl">
+          {skills.map((skill, index) => (
+            <li
+              key={index}
+              className=" bg-stone-200 white/10 py-3 px-5 rounded-2xl"
+            >
               <h6 className="font-PoppinsRegular">{skill}</h6>
             </li>
           ))}

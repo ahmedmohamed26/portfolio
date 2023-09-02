@@ -5,3 +5,5 @@ export { default as ProjectsIcon } from "./projects.svg";
 export { default as MarkerIcon } from "./marker.svg";
 export { default as CopyIcon } from "./copy.svg";
 export { default as PhoneIcon } from "./phone.svg";
+export { default as BrightnessIcon } from "./brightness.svg";
+export { default as DarkmodeIcon } from "./darkmode.svg";
