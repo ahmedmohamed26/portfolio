@@ -29,5 +29,5 @@
 }
 
 .main-color {
-  @apply text-slate-800 font-bold font-PoppinsMedium;
+  @apply text-slate-800 font-bold;
 }

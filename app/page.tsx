@@ -10,16 +10,18 @@ export default function Home() {
   };
 
   return (
-    <section className="wrapper">
+    <section className="wrapper dark:bg-dark-gray">
       <div className="flex justify-between items-center">
-        <h1 className="text-4xl  main-color mb-5">About Me</h1>
+        <h1 className="text-4xl main-color font-PoppinsMedium mb-5 dark:text-light-gray-text">
+          About Me
+        </h1>
 
         {/* <h2 className="text-white	text-xs tracking-[.05em] relative bg-green-500 py-1 px-2 rounded-full font-PoppinsRegular">
           AVAILABLE FOR WORK
         </h2> */}
       </div>
-      <div className="profile-details ">
-        <div className="info flex justify-between items-top gap-6    lg:flex-row   max-sm:flex-col md:flex-col 	">
+      <div className="profile-details">
+        <div className="info flex justify-between items-top gap-6 lg:flex-row   max-sm:flex-col md:flex-col 	">
           <Image
             width={300}
             height={300}
@@ -28,7 +30,7 @@ export default function Home() {
             className="rounded-lg h-60"
           />
           <div>
-            <p className=" font-PoppinsRegular light-gray-color ">
+            <p className=" font-PoppinsRegular light-gray-color text-[17px]">
               Hi, I am Ahmed Mohamed an energetic and enthusiastic frontend web
               developer eager to learn new technologies and build amazing stuff.
               I'm 30 years old, up I om enjoying building elegant and
@@ -49,20 +51,22 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="bg-[#f6f8fa] p-4 mt-8 rounded-md">
-          <h3 className="main-color">Contact Me</h3>
+        <div className="bg-[#f6f8fa] p-4 mt-8 rounded-md dark:bg-soft-gray">
+          <h3 className="main-color font-PoppinsMedium dark:text-light-gray-text">
+            Contact Me
+          </h3>
           <ul className="mt-5 gap-3 flex flex-col	font-PoppinsRegular">
             <li className="flex items-center">
-              <MarkerIcon className="text-[#4f535f] bg-white p-2 rounded-full w-8 h-8 drop-shadow-md border-zinc-600 " />
-              <span className="mx-3 font-PoppinsRegular light-gray-color ">
+              <MarkerIcon className="text-[#4f535f] bg-white p-2 rounded-full w-8 h-8 drop-shadow-md border-zinc-600 dark:bg-soft-gray dark:border-gray-600 dark:border-[1px] dark:text-white" />
+              <span className="mx-3 font-PoppinsRegular light-gray-color dark:text-light-gray-text dark:text-white">
                 Cairo , Egypt
               </span>
             </li>
             <li className="flex items-center">
-              <PhoneIcon className="  text-[#4f535f] bg-white p-2 rounded-full w-8 h-8 drop-shadow-md border-zinc-600 " />
+              <PhoneIcon className="  text-[#4f535f] bg-white p-2 rounded-full w-8 h-8 drop-shadow-md border-zinc-600 dark:bg-soft-gray dark:border-gray-600 dark:border-[1px] dark:text-white" />
               <Link href={`tel:${+201124269532}`}>
                 {" "}
-                <span className="mx-3 font-PoppinsRegular light-gray-color ">
+                <span className="mx-3 font-PoppinsRegular light-gray-color dark:text-light-gray-text dark:text-white">
                   +20 112 4269 532
                 </span>
               </Link>

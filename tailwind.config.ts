@@ -25,7 +25,9 @@ const config: Config = {
       },
       colors: {
         "dark-black": "rgba(22, 22, 22, 1)",
-        "light-gray": "rgb(33, 33, 33)",
+        "dark-gray": "rgb(33, 33, 33)",
+        "soft-gray": "rgba(44, 44, 44, 1)",
+        "light-gray-text": "rgba(129, 129, 129, 1)",
       },
     },
   },

@@ -51,9 +51,11 @@ export default function Skills() {
     },
   };
   return (
-    <section className="wrapper dark:bg-light-gray">
+    <section className="wrapper dark:bg-dark-gray">
       <div className=" ">
-        <h1 className="text-4xl  main-color mb-5 dark:text-white">Skills</h1>
+        <h1 className="text-4xl  main-color font-PoppinsMedium mb-5 dark:text-white">
+          Skills
+        </h1>
         <motion.ul
           className="flex flex-wrap gap-6 items-center"
           variants={boxVariant}
@@ -63,7 +65,7 @@ export default function Skills() {
           {skills.map((skill, index) => (
             <li
               key={index}
-              className=" bg-stone-200 white/10 py-3 px-5 rounded-2xl"
+              className=" bg-stone-200 white/10 py-3 px-5 rounded-2xl dark:bg-transparent   dark:border-gray-600 dark:border-[1px]"
             >
               <h6 className="font-PoppinsRegular">{skill}</h6>
             </li>
