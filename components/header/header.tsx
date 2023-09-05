@@ -38,7 +38,7 @@ function Header() {
   const pathName = usePathname();
   let [activeTab, setActiveTab] = useState(pathName.replace("/", ""));
   return (
-    <div className="container h-[70px] bg-white shadow-sm flex items-center my-5 rounded-md justify-between p-5 dark:bg-dark-gray sticky top-5">
+    <div className="container z-20 h-[70px] bg-white shadow-sm flex items-center my-5 rounded-md justify-between p-5 dark:bg-dark-gray sticky top-5">
       <ul className="flex ">
         <li className="flex gap-2 ">
           {tabs.map((tab) => (

@@ -9,3 +9,4 @@ export { default as BrightnessIcon } from "./brightness.svg";
 export { default as DarkmodeIcon } from "./darkmode.svg";
 export { default as ArrowIcon } from "./arrow.svg";
 export { default as ArrowRightIcon } from "./arrow-right.svg";
+export { default as DownloadIcon } from "./download.svg";

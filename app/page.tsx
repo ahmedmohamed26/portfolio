@@ -2,25 +2,32 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { CopyIcon, MarkerIcon, PhoneIcon } from "../public/svgs";
+import { CopyIcon, MarkerIcon, PhoneIcon, DownloadIcon } from "../public/svgs";
+import { useState } from "react";
 
 export default function Home() {
+  const [copied, setCopied] = useState<boolean>(false);
   const copylink = (entryText: any) => {
     navigator.clipboard.writeText(entryText);
+    setCopied(true);
+    setTimeout(() => {
+      setCopied(false);
+    }, 1000);
   };
 
   return (
     <section className="wrapper dark:bg-dark-gray">
       <div className="flex justify-between items-center">
-        <h1 className="text-4xl main-color font-PoppinsMedium mb-5 dark:text-light-gray-text">
+        <h1 className="text-4xl main-color font-PoppinsMedium dark:text-light-gray-text">
           About Me
         </h1>
-
-        {/* <h2 className="text-white	text-xs tracking-[.05em] relative bg-green-500 py-1 px-2 rounded-full font-PoppinsRegular">
-          AVAILABLE FOR WORK
-        </h2> */}
+        {
+          <h2 className="text-white	text-xs tracking-[.05em] relative bg-green-500 py-1 px-2 rounded-full font-PoppinsRegular">
+            AVAILABLE FOR WORK
+          </h2>
+        }
       </div>
-      <div className="profile-details">
+      <div className="profile-details mt-10">
         <div className="info flex justify-between items-top gap-6 lg:flex-row   max-sm:flex-col md:flex-col 	">
           <Image
             width={300}
@@ -71,18 +78,29 @@ export default function Home() {
                 </span>
               </Link>
             </li>
-            <li className="flex items-center mt-8">
-              <button
-                onClick={() => copylink("ahmed.m.moneem@gmail.com")}
-                className="flex items-center px-3 py-3 rounded-md drop-shadow-md bg-black"
-              >
-                <CopyIcon className="text-white" />
-                <span className="text-white mx-2 text-sm font-PoppinsRegular">
-                  Copy Email
-                </span>
-              </button>
-            </li>
           </ul>
+          <div className="flex mt-5 gap-5">
+            <button
+              onClick={() => copylink("ahmed.m.moneem@gmail.com")}
+              className="flex items-center w-[130px] px-3 py-3 rounded-md drop-shadow-md bg-black"
+            >
+              <CopyIcon className="text-white" />
+              <span className="text-white mx-2 text-sm font-PoppinsRegular">
+                {!copied ? "Copy Email" : "Copied"}
+              </span>
+            </button>
+            <Link
+              href="/IAhmedMohamed.pdf"
+              target="_blank"
+              download
+              className="flex items-center   px-3 py-3 rounded-md drop-shadow-md bg-black hover:shadow-inner"
+            >
+              <DownloadIcon className="text-white" />
+              <span className="text-white mx-2 text-sm font-PoppinsRegular">
+                Download CV
+              </span>
+            </Link>
+          </div>
         </div>
       </div>
     </section>
