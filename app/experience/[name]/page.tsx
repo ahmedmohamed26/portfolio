@@ -2,56 +2,9 @@
 import { ArrowRightIcon } from "@/public/svgs";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import experienceList from "../../../public/experienceList.json";
 
 export default function CompanyDetails(props: any) {
-  const experienceList = [
-    {
-      id: 1,
-      title: "Senior Frontend Developer",
-      companyName: "AFAQY",
-      url: "AFAQY",
-      website: "https://www.afaqy.com/",
-      logo: "A",
-      year: "Des 2021 - Present",
-      projectType: "Live Tracking",
-      responsibility: [
-        "Make opp live tracking to help track the vehicles on your system using leaflet map",
-        "create automatic systems to locate the car that you do some of the work assigned to it according to the business",
-        " Unit testing with (Karma or jest)",
-        "Create projects with angular +10 or Reactjs",
-        "Mode recommendations for new technology integration bosed on suitability and alignment to business goals.",
-        "Responsibility For Restful APIs",
-        "Performance And Usability Testing",
-      ],
-    },
-    {
-      id: 2,
-      title: "Senior Frontend Developer",
-      companyName: "El-Dokan Software",
-      url: "ElDokan",
-      website: "https://el-dokan.com/cgi-sys/suspendedpage.cgi",
-      logo: "D",
-      year: "Feb 2021 - Nov 2021",
-    },
-    {
-      id: 3,
-      title: "Senior Frontend Developer",
-      companyName: "Proemcs",
-      website: "https://www.proemcs.com/",
-      url: "Proemcs",
-      logo: "P",
-      year: "May 2019 - Jan 2021",
-    },
-    {
-      id: 4,
-      title: "Frontend Developer",
-      companyName: "Valux Apps",
-      url: "ValuxApps",
-      website: "https://www.valuxapps.com/ar",
-      logo: "V",
-      year: "Jan 2018 - April 2019",
-    },
-  ];
   let [itemCompany, setItemCompany] = useState<any>({});
   useEffect(() => {
     let x: any = experienceList.find((item) => item.url === props.params.name);

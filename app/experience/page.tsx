@@ -1,38 +1,8 @@
 import Link from "next/link";
 import React from "react";
 import { ArrowIcon } from "../../public/svgs";
-
+import experienceList from "../../public/experienceList.json";
 function Experience() {
-  const experienceList = [
-    {
-      id: 1,
-      title: "Senior Frontend Developer",
-      companyName: "AFAQY",
-      url: "AFAQY",
-      logo: "A",
-    },
-    {
-      id: 2,
-      title: "Senior Frontend Developer",
-      companyName: "El-Dokan Software",
-      url: "ElDokan",
-      logo: "D",
-    },
-    {
-      id: 3,
-      title: "Senior Frontend Developer",
-      companyName: "Proemcs",
-      url: "Proemcs",
-      logo: "P",
-    },
-    {
-      id: 4,
-      title: "Frontend Developer",
-      companyName: "Valux Apps",
-      url: "ValuxApps",
-      logo: "V",
-    },
-  ];
   return (
     <section className="wrapper dark:bg-dark-gray">
       <h1 className="text-4xl  main-color font-PoppinsMedium mb-5 dark:text-white">
