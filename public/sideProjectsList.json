@@ -1,0 +1,14 @@
+[
+  {
+    "appName": "Movies App",
+    "logo": "M",
+    "website": "https://watch-movies-app.netlify.app/",
+    "colorLogo": "#999"
+  },
+  {
+    "appName": "Football App",
+    "logo": "F",
+    "website": "https://iahmedmohamed.netlify.app/",
+    "colorLogo": "#007bff"
+  }
+]

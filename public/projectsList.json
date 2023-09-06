@@ -1,0 +1,27 @@
+[
+  {
+    "appName": "Zahran Stores",
+    "logo": "Z",
+    "website": "https://zahranstores.com/",
+    "colorLogo": "#cc0202"
+  },
+  {
+    "appName": "Misr Pharmacy",
+    "logo": "M",
+    "website": "https://misr-online.com/",
+    "colorLogo": "#6e716e"
+  },
+
+  {
+    "appName": "Mobilaty",
+    "logo": "M",
+    "website": "https://www.mobilaty.com/en",
+    "colorLogo": "#DA1E42"
+  },
+  {
+    "appName": "Switch Plus",
+    "logo": "S",
+    "website": "https://switchpluseg.com/",
+    "colorLogo": "#033874"
+  }
+]

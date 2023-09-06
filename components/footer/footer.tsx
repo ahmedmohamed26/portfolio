@@ -1,11 +1,5 @@
-import {
-  InstgramIcon,
-  TwitterIcon,
-  LinkedinIcon,
-  GithubIcon,
-} from "@/public/svgs";
+import { GithubIcon, LinkedinIcon, TwitterIcon } from "@/public/svgs";
 import Link from "next/link";
-import React from "react";
 
 function Footer() {
   return (
@@ -32,15 +26,6 @@ function Footer() {
             <li className="text-[#4f535f] bg-white p-2 rounded-full  drop-shadow-md border-zinc-600 dark:bg-soft-gray dark:border-gray-600 dark:border-[1px] dark:text-white">
               <Link href="https://twitter.com/Ahmedmoohamed26" target="_blank">
                 <TwitterIcon />
-              </Link>
-            </li>
-
-            <li className="text-[#4f535f] bg-white p-2 rounded-full  drop-shadow-md border-zinc-600 dark:bg-soft-gray dark:border-gray-600 dark:border-[1px] dark:text-white">
-              <Link
-                href="https://www.instagram.com/ahmed.m.moneem/"
-                target="_blank"
-              >
-                <InstgramIcon />
               </Link>
             </li>
           </ul>

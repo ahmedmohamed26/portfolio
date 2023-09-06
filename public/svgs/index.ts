@@ -10,7 +10,7 @@ export { default as DarkmodeIcon } from "./darkmode.svg";
 export { default as ArrowIcon } from "./arrow.svg";
 export { default as ArrowRightIcon } from "./arrow-right.svg";
 export { default as DownloadIcon } from "./download.svg";
-export { default as InstgramIcon } from "./instgram.svg";
 export { default as TwitterIcon } from "./twitter.svg";
 export { default as LinkedinIcon } from "./linkedin.svg";
 export { default as GithubIcon } from "./github.svg";
+export { default as ProjectsIcon } from "./projects.svg";

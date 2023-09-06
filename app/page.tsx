@@ -93,7 +93,7 @@ export default function Home() {
               href="/IAhmedMohamed.pdf"
               target="_blank"
               download
-              className="flex items-center   px-3 py-3 rounded-md drop-shadow-md bg-black hover:shadow-inner"
+              className="flex items-center  w-[150px]  px-3 py-3 rounded-md drop-shadow-md bg-black hover:shadow-inner"
             >
               <DownloadIcon className="text-white" />
               <span className="text-white mx-2 text-sm font-PoppinsRegular">

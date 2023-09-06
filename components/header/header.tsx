@@ -4,7 +4,12 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
 import DarkModeButton from "../darkmode/darkMode";
-import { ExperienceIcon, HomeIcon, SkillsIcon } from "../../public/svgs";
+import {
+  ExperienceIcon,
+  HomeIcon,
+  SkillsIcon,
+  ProjectsIcon,
+} from "../../public/svgs";
 import { usePathname } from "next/navigation";
 
 const tabs = [
@@ -27,12 +32,12 @@ const tabs = [
     icon: <ExperienceIcon className="text-lg text-[#4f535f] dark:text-white" />,
     path: "/experience",
   },
-  // {
-  //   id: "projects",
-  //   label: "Projects",
-  //   icon: <experienceIcon className="text-lg text-[#4f535f] dark:text-white" />,
-  //   path: "/projects",
-  // },
+  {
+    id: "projects",
+    label: "Projects",
+    icon: <ProjectsIcon className="text-lg text-[#4f535f] dark:text-white" />,
+    path: "/projects",
+  },
 ];
 function Header() {
   const pathName = usePathname();
