@@ -7,9 +7,9 @@ import experienceList from "../../../public/experienceList.json";
 export default function CompanyDetails(props: any) {
   let [itemCompany, setItemCompany] = useState<any>({});
   useEffect(() => {
-    let x: any = experienceList.find((item) => item.url === props.params.name);
-    setItemCompany(x);
-  }, []);
+    let companyName: any = experienceList.find((item) => item.url === props.params.name);
+    setItemCompany(companyName);
+  }, [props.params.name]);
   return (
     <section className="bg-white p-4   rounded-md dark:bg-dark-gray">
       <div className="info bg-[#f6f8fa] p-4 rounded-md dark:bg-soft-gray">
@@ -61,8 +61,6 @@ export default function CompanyDetails(props: any) {
           </li>
         ))}
       </ul>
-
-      {/* <div>{props.params.name}</div> */}
     </section>
   );
 }

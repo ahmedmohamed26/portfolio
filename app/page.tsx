@@ -72,7 +72,7 @@ export default function Home() {
             <li className="flex items-center">
               <PhoneIcon className="  text-[#4f535f] bg-white p-2 rounded-full w-8 h-8 drop-shadow-md border-zinc-600 dark:bg-soft-gray dark:border-gray-600 dark:border-[1px] dark:text-white" />
               <Link href={`tel:${+201124269532}`}>
-                {" "}
+                {` `}
                 <span className="mx-3 font-PoppinsRegular light-gray-color dark:text-light-gray-text dark:text-white">
                   +20 112 4269 532
                 </span>

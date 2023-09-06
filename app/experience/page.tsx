@@ -11,10 +11,9 @@ function Experience() {
 
       <ul className="mt-5	font-PoppinsRegular">
         {experienceList.map((item) => (
-          <Link href={`experience/${item.url}`}>
+          <Link  key={item.id} href={`experience/${item.url}`}>
             <li
               className="mt-5 bg-[#f6f8fa] p-4 rounded-md dark:bg-soft-gray flex  justify-between  items-center drop-shadow-sm"
-              key={item.id}
             >
               <div className="flex gap-4  items-center ">
                 <div className="border-[1px] w-[40px] h-[40px] rounded-full flex justify-center items-center drop-shadow-lg border-zinc-400 dark:bg-soft-gray dark:border-gray-600 dark:border-[1px] dark:text-white">
