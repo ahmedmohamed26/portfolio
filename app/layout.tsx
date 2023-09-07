@@ -1,9 +1,8 @@
-import Header from "@/components/header/header";
-import "./globals.css";
-import type { Metadata } from "next";
-import { Providers } from "@/components/providers/providers";
 import Footer from "@/components/footer/footer";
-import Head from "next/head";
+import Header from "@/components/header/header";
+import { Providers } from "@/components/providers/providers";
+import type { Metadata } from "next";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Portfolio App",
@@ -17,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Head>
+      <head>
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=3644927"
@@ -31,7 +30,7 @@ export default function RootLayout({
    gtag('config', '3644927');`,
           }}
         ></script>
-      </Head>
+      </head>
       <body className="md:w-1/2 sm:w-full  max-[600px]:p-3 center m-auto  dark:bg-dark-black bg-zinc-200">
         <Providers>
           <Header />
