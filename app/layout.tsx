@@ -3,6 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Providers } from "@/components/providers/providers";
 import Footer from "@/components/footer/footer";
+import Head from "next/head";
 
 export const metadata: Metadata = {
   title: "Portfolio App",
@@ -16,6 +17,21 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <Head>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=3644927"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+   window.dataLayer = window.dataLayer || [];
+   function gtag(){dataLayer.push(arguments);}
+   gtag('js', new Date());
+   gtag('config', '3644927');`,
+          }}
+        ></script>
+      </Head>
       <body className="md:w-1/2 sm:w-full  max-[600px]:p-3 center m-auto  dark:bg-dark-black bg-zinc-200">
         <Providers>
           <Header />
@@ -23,19 +39,6 @@ export default function RootLayout({
           <Footer />
         </Providers>
       </body>
-      <script
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=3644927"
-      ></script>
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-   window.dataLayer = window.dataLayer || [];
-   function gtag(){dataLayer.push(arguments);}
-   gtag('js', new Date());
-   gtag('config', '3644927');`,
-        }}
-      ></script>
     </html>
   );
 }
