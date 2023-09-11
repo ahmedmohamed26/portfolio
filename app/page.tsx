@@ -34,7 +34,8 @@ export default function Home() {
             height={300}
             src="/images/profile-image.jpg"
             alt="profile-image"
-            className="rounded-lg h-60"
+            // style={{ borderRadius: "30% 70% 70% 30% / 30% 38% 62% 70%" }}
+            className="rounded-lg  h-60"
           />
           <div>
             <p className=" font-PoppinsRegular light-gray-color text-[17px]">
