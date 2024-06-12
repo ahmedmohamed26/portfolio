@@ -19,10 +19,10 @@ const DarkModeButton = () => {
     <button
       onClick={(e) => (theme === "dark" ? setTheme("light") : setTheme("dark"))}
     >
-      {theme === "dark" ? (
+      {theme === "light" ? (
         <DarkmodeIcon className=" dark:text-white" />
       ) : (
-        <BrightnessIcon className="text-lg text-[#4f535f]" />
+        <BrightnessIcon className="text-lg text-white" />
       )}
     </button>
   );
